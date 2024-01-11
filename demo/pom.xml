@@ -59,6 +59,17 @@
 			<version>3.2.1</version>
 		</dependency>
 
+<<<<<<< HEAD
+=======
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>6.1.2</version>
+		</dependency>
+
+
+>>>>>>> 518d6b0a9aa6584e4105ffc0bbb1c18c0eef7b4e
 
 
 <!--		 https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa-->
@@ -69,6 +80,10 @@
 		</dependency>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 518d6b0a9aa6584e4105ffc0bbb1c18c0eef7b4e
 	</dependencies>
 
 	<build>
