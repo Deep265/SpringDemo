@@ -1,40 +1,29 @@
 import './App.css';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
+import ViewUsers from './components/ViewUsers';
+import AddUser from './components/AddUser';
+import UpdateUser from './components/UpdateUser';
+import DeleteUser from './components/DeleteUser';
+import Header from './components/Header';
 
 function App() {
-  const[data, setData]=useState([])
-  useEffect(()=>{
-    fetch("https://jsonplaceholder.typicode.com/todos").then((result)=>{
-      result.json().then((resp)=>{
-        setData(resp)
-      })
-    })
-  },[])
-  console.warn(data)
+  
+  
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <table border="1">
-        <thead>
-        <tr>
-        <td>USERID</td>
-        <td>ID</td>
-        <td>TITLE</td>
-        <td>COMPLETED</td>
-        </tr>
-        </thead>
-        <tbody>
-        {data.map((item) => (
-            <tr key={item.id}>
-              <td>{item.userId}</td>
-              <td>{item.id}</td>
-              <td>{item.title}</td>
-              <td>{item.completed ? 'True' : 'False'}</td>
-            </tr>
-          ))}
-          </tbody>
-      </table>
-    </div>
+      <>
+      <h1>CRUD APP</h1>
+      <Header/>
+      <BrowserRouter>
+      <Routes>
+        <Route path={"/"} element={<ViewUsers/>} exact={true}/>
+        <Route path={"/viewusers"} element={<ViewUsers/>} exact={true}/>
+        <Route path={"/adduser"} element={<AddUser/>} exact={true}/>
+        <Route path={"/updateuser/:eid"} element={<UpdateUser/>} exact={true}/>
+        <Route path={"/deleteuser"} element={<DeleteUser/>} exact={true}/>
+      </Routes>
+      </BrowserRouter>
+      </>
   );
 }
 
