@@ -33,7 +33,7 @@ const ViewUsers = () => {
   }
 
   let handleDelete = (eid) => {
-    navigate({pathname : '/deleteuser', state : {eid}})
+    navigate('/deleteuser/'+eid, {state : {"eid":eid}})
   }
 
 

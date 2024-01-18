@@ -5,7 +5,7 @@ const getAllUsersUrl= " http://localhost:8080/emps ";
 const findUserUrl= " http://localhost:8080/getEmp/ ";
 const addUserUrl = " http://localhost:8080/addEmp ";
 const updateUserUrl = " http://localhost:8080/updateEmp ";
-const deleteUserUrl = " http://localhost:8080/deleteEmp ";
+const deleteUserUrl = " http://localhost:8080/deleteEmp/ ";
 
 class UserService{
     

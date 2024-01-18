@@ -94,7 +94,7 @@ const UpdateUser = () => {
             <input
               onChange={handleNameChange}
               type="text"
-              value={user.ename}
+              value={user.ename || ''}
               className="form-control"
               placeholder={user.ename}
             />
@@ -102,7 +102,7 @@ const UpdateUser = () => {
             <input
               onChange={handleTechnologyChange}
               type="text"
-              value={user.technology}
+              value={user.technology || ''}
               className="form-control"
               placeholder={user.technology}
             />

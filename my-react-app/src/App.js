@@ -20,7 +20,7 @@ function App() {
         <Route path={"/viewusers"} element={<ViewUsers/>} exact={true}/>
         <Route path={"/adduser"} element={<AddUser/>} exact={true}/>
         <Route path={"/updateuser/:eid"} element={<UpdateUser/>} exact={true}/>
-        <Route path={"/deleteuser"} element={<DeleteUser/>} exact={true}/>
+        <Route path={"/deleteuser/:eid"} element={<DeleteUser/>} exact={true}/>
       </Routes>
       </BrowserRouter>
       </>
