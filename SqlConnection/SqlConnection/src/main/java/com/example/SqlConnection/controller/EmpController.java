@@ -18,21 +18,21 @@ public class EmpController {
     {
         return "home";
     }
-    @PostMapping("/emp")
+    @PostMapping("/addEmp")
     public Emp addEmp(@RequestBody Emp emp)
     {
         repo.save(emp);
         return emp;
     }
 
-    @PutMapping("/emp")
+    @PutMapping("/updateEmp")
     public Emp SaveOrUpdateEmp(@RequestBody Emp emp)
     {
         repo.save(emp);
         return emp;
     }
 
-    @DeleteMapping("/emp/{eid}")
+    @DeleteMapping("/deleteEmp/{eid}")
     public String deleteEmp(@PathVariable int eid)
     {
         Emp e = repo.getOne(eid);
@@ -54,7 +54,7 @@ public class EmpController {
         return repo.findAll();
     }
 
-    @RequestMapping("/emp/{eid}")
+    @RequestMapping("/getEmp/{eid}")
     public Optional<Emp> getEmp(@PathVariable("eid")int eid)
     {
         return repo.findById(eid);
